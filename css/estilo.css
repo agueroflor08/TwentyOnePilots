@@ -1,0 +1,237 @@
+/*** CSS GENERAL ***/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+nav{
+    background-color: black;
+}
+header{
+    background-color: rgb(143, 6, 6);
+}
+header h1{
+    color: white;
+}
+main{
+    background-color: beige;
+}
+footer{
+    background-color: black;
+}
+@font-face{
+    font-family: alef-regular;
+    src: url(../fuentes/alef-regular.ttf);
+    src: url(../fuentes/alef-regular-webfont.woff);
+    src: url(../fuentes/alef-regular-webfont.woff2);
+}
+/*** CSS PARA MÓVIL ***/
+
+@media all and (min-width:320px){
+
+    /** menú para celular **/
+    #contenedor-menu img{
+        width: 10vw;
+    }
+    #contenedor-menu #cerrar{
+        display: none; /**Oculta imagen de x**/
+    }
+    #contenedor-menu #contenedor-enlaces{
+        height: 0; /**Cambia altura a cero**/
+        overflow: hidden; /**Oculta lo que sobresale**/
+        transition: height 1s ease; /**Efecto de transición**/
+    }
+    #contenedor-menu:target #abrir{
+        display: none; /**Oculta la imagen de la hamburguesa**/
+    }
+    #contenedor-menu:target #cerrar{
+        display: block; /**Muestra la imagen de x**/
+    }
+    #contenedor-menu:target #contenedor-enlaces{
+        height: 30vh;
+        transition: height 1s ease;
+    }
+    #contenedor-menu #contenedor-enlaces a{
+        display: block; /**Me pone uno debajo del otro**/
+        width: 100%;
+        margin-bottom: 0.25em;
+        margin-top: 0.25em;
+        text-decoration: none;
+        background-color: gray;
+        color: black;
+        padding: 1em; /**Genera espacio a la vuelta**/
+    }
+    #contenedor-menu{
+        background-color: black;
+    }
+
+    .nav1 ul{
+        height:5vh;
+    }
+    .nav1 ul a{
+        color:white;
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+    }
+    /** encabezado **/
+    header {
+       height: 10vh;
+    }
+    header h1{
+        font-size: 1.5em;
+        text-align: center;
+        font-family: 'Fugaz One', cursive;
+        text-align: center;
+        padding: 0.3em;
+    }
+    
+    /** seccion contenedora del aside y main **/
+    #contenedor{
+        display: flex;
+        flex-direction: column; /*para que quede uno debajo del otro*/
+    }
+    main article{
+        padding: 0.5em;
+    }
+    main article figure{
+        max-width: 99%;
+    }
+    main article figure img{
+        width: 100%;
+    }
+    main article h2, main article h3{
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 0.5em;
+        font-family: 'Fugaz One', cursive;
+    }
+    
+
+    main #parrafo p{
+        text-indent: 1%;
+        font-size: 1.1em;
+        font-family: alef-regular !important;
+    }
+    aside{
+        background-color: beige;
+        padding: 0.5em;
+    }
+    aside h2{
+        font-size: 1.2em;
+        padding: 1em;
+        font-weight: bold;
+        background-color: rgb(143, 6, 6);
+        color: white;
+        text-align: center;
+    }
+    aside h3{
+        font-size: 1.1em;
+        padding: 0.5em;
+        font-weight: bold;
+        background-color: rgb(143, 6, 6);
+        color:white;
+        text-align: center;
+    }
+    aside p{
+        padding: 0.3em;
+        font-family: Alef-regular;
+    }
+    aside figure{
+        max-width: 99%;
+        padding: 0.5em;
+    }
+    aside figure img{
+        width: 100%;
+    }
+    aside figure figcaption{
+        font-style: oblique;
+    }
+
+    /* video */
+    iframe{
+        width: 100%;
+        height: 50vh;
+    }
+    /** Pie **/
+   
+    footer p{
+        color: white;
+        padding: 0.5em;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .p-footer{
+        font-style: italic;
+    }
+    footer p a{
+        color: white;
+        font-style: oblique;
+        text-decoration: none;
+    }
+    footer p a:hover, footer p a:focus{
+        color: rgb(143, 6, 6);
+    }
+}
+
+/*** CSS PARA PC ***/
+@media all and (min-width:720px){
+
+    /** menú para pc **/
+    #abrir, #cerrar{
+        display: none; /*Oculta imágenes del menú*/
+    }
+    #contenedor-menu #contenedor-enlaces{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 5vh;
+    }
+    #contenedor-menu #contenedor-enlaces{
+        padding: 0.3em;
+        align-items: center;
+    }
+    #contenedor-menu #contenedor-enlaces a{
+        font-size: 1.2em;
+        color: white;
+        background-color: black;
+    }
+    #contenedor-menu #contenedor-enlaces a:hover, #contenedor-menu #contenedor-enlaces a:focus{
+        color: rgb(156, 36, 36);
+        transition: color 1s ease;
+        font-size: 1.3em;
+    }
+    
+    .nav1 ul a:hover, .nav1 ul a:focus{
+        color: rgb(156, 36, 36);
+    }
+    header{
+        padding: 0.5em;
+        font-size: 1.8em;
+    }
+    /**Seccion contenedora del aside y main**/
+    #contenedor{
+        display: flex;
+        flex-direction: row;
+    }
+    #seccion-principal article figure{
+        width: 66%;
+        float: left;
+        margin-right: 1em;
+    }
+    aside figure{
+        width: 80%;
+    }
+    aside{
+        min-width: 30%;
+    }
+
+    /* video */
+    iframe{
+        width: 60%;
+        height: 60vh;
+    }
+   video{
+       width: 60%;
+   }
+}
