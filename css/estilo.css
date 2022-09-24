@@ -153,6 +153,10 @@ footer{
         width: 100%;
         height: 50vh;
     }
+    .video1{
+        width: 100%;
+        height: 50vh;
+    }
     /** Pie **/
    
     footer p{
@@ -231,7 +235,8 @@ footer{
         width: 60%;
         height: 60vh;
     }
-   video{
+   .video1{
        width: 60%;
+       height: 60vh;
    }
 }
